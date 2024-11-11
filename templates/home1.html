@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumira-Veloxa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='home.css')}}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand company-name" href="#">Lumira-Veloxa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutus">About Us</a> <!-- Internal link to About Us section -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Tiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Budget & ROI</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main-content text-center">
+        <h2>Welcome to Lumira-Veloxa</h2>
+        <p class="quote">"Illuminations and insight into the future, implying swift and efficient growth momentum"</p>
+        <p>Your journey towards illumination and insight into future growth begins here.</p>
+        <a href="{{ url_for('login_register') }}" class="btn btn-primary mt-3">Let's Get Started</a> <!-- Links to About Us section -->
+    </section>
+
+    <!-- About Us Section -->
+    <section id="aboutus" class="section about-us">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p>We are at the forefront of futuristic insights and innovation.</p>
+        </div>
+    </section>
+
+    <!-- Suggestion Section -->
+    <section id="suggestion" class="section suggestion">
+        <div class="container text-center">
+            <h2>Suggestions</h2>
+            <p>We value your input for a brighter future.</p>
+
+            <!-- Feedback Cards -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Aman</h5> <!-- Updated User Feedback name -->
+                            <p class="card-text">"This company has given us remarkable insights into future tech. Highly recommended!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Shrey</h5> <!-- Updated User Feedback name -->
+                            <p class="card-text">"Their solutions are cutting-edge and help us stay ahead of the curve."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Harsh Gangwar</h5> <!-- Updated User Feedback name -->
+                            <p class="card-text">"Incredible customer service and innovative ideas. I'm a fan!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Suggestion Button -->
+            <a href="#suggestionForm" class="btn btn-secondary mt-4">Add Suggestion</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="section footer text-center">
+        <p>&copy; 2024 Lumira-Veloxa. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for dynamic background and bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='home.js') }}" ></script>
+</body>
+</html>

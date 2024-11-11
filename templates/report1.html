@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PZT Data Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='report.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Solar Radiation Data Analysis</h1>
+
+        <div class="card mb-4">
+            <div class="card-header">Enter Geolocation</div>
+            <div class="card-body">
+                <form id="locationForm">
+                    <div class="form-group">
+                        <label for="latitude">Latitude:</label>
+                        <input type="number" class="form-control" id="latitude" placeholder="e.g., 40.7128" required step="any">
+                    </div>
+                    <div class="form-group">
+                        <label for="longitude">Longitude:</label>
+                        <input type="number" class="form-control" id="longitude" placeholder="e.g., -74.0060" required step="any">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Get Data</button>
+                </form>
+            </div>
+        </div>
+
+        <canvas id="solarChart" width="400" height="200"></canvas>
+        <div id="output" class="mt-4"></div>
+    </div>
+    <script src="{{ url_for('static', filename='sample_data_report.js') }}" ></script>
+</body>
+</html>

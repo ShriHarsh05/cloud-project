@@ -1,0 +1,77 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+    transition: background-color 10s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 200px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#toggle-form {
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#toggle-form span {
+    color: #61dafb;
+    text-decoration: underline;
+}
+
+@keyframes backgroundChange {
+    0% { background-color: #282c34; }
+    100% { background-color: #3b5998; }
+}
